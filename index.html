@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Student Performance Predictor</h1>
+
+    <form action="/predict" method="POST">
+        <div class="container">
+            <!-- First column -->
+            <div class="pt1">
+                <label>Age:</label>
+                <input type="number" name="age" required>
+
+                <label>Gender:</label>
+                <select name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <label>Study Hours/Day:</label>
+                <input type="number" name="study_hours" required>
+
+                <label>Social Media Hours:</label>
+                <input type="number" name="social_media" required>
+
+                <label>Netflix Hours:</label>
+                <input type="number" name="netflix" required>
+
+                <label>Part-time Job:</label>
+                <select name="part_time_job" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <label>Attendance %:</label>
+                <input type="number" name="attendance" required>
+            </div>
+
+            <!-- Second column -->
+            <div class="pt2">
+                <label>Sleep Hours:</label>
+                <input type="number" name="sleep_hours" required>
+
+                <label>Diet Quality:</label>
+                <select name="diet_quality" required>
+                    <option value="Poor">Poor</option>
+                    <option value="Fair">Fair</option>
+                    <option value="Good">Good</option>
+                </select>
+
+                <label>Exercise Frequency:</label>
+                <input type="number" name="exercise_freq" required>
+
+                <label>Parental Education Level:</label>
+                <select name="parental_edu" required>
+                    <option value="High School">High School</option>
+                    <option value="Bachelor">Bachelor</option>
+                    <option value="Master">Master</option>
+                    <option value="None">None</option>
+                </select>
+
+                <label>Internet Quality:</label>
+                <select name="internet_quality" required>
+                    <option value="Poor">Poor</option>
+                    <option value="Average">Average</option>
+                    <option value="Good">Good</option>
+                </select>
+
+                <label>Mental Health Rating (1-10):</label>
+                <input type="number" name="mental_health" min="1" max="10" required>
+
+                <label>Extracurricular Participation:</label>
+                <select name="extracurricular" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="btn-container">
+            <button type="submit">Predict Score</button>
+        </div>
+    </form>
+</body>
+</html>

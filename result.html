@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Prediction Result</h1>
+    <p>Your Predicted Exam Score is:</p>
+    <h2 class="score">{{ score }}</h2>
+    <a href="/">Predict Again</a>
+  </div>
+</body>
+</html>
